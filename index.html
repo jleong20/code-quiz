@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <h1 id ="timer">0</h1>
+    <p id="main">This challenge tests your knowledge in coding.</p>
+    <button id="start">start</button>
+    <script>
+        var start = document.getElementById("start");
+        var timerEl = document.getElementById("timer");
+        var quiz = document.getElementById("quiz");
+        var count = 60;
+        start.addEventListener("click",function(){
+            var timer = setInterval(function(){
+            count--;
+            timerEl.textContent = count;
+            if(count == 0){
+                clearInterval(timer);
+            }
+            }, 1000);
+            quiz.textContent = "yo";
+        });
+    </script>
+</body>
+</html>
