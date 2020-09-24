@@ -4,26 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
-    <h1 id ="timer">0</h1>
-    <p id="main">This challenge tests your knowledge in coding.</p>
-    <button id="start">start</button>
-    <script>
-        var start = document.getElementById("start");
-        var timerEl = document.getElementById("timer");
-        var quiz = document.getElementById("quiz");
-        var count = 60;
-        start.addEventListener("click",function(){
-            var timer = setInterval(function(){
-            count--;
-            timerEl.textContent = count;
-            if(count == 0){
-                clearInterval(timer);
-            }
-            }, 1000);
-            quiz.textContent = "yo";
-        });
-    </script>
+<body style = "background-color: cornflowerblue;">
+    <header class="text-right" id ="timer">Timer: 0</header>
+    <main class="text-center" id="main">Coding Quiz
+        <p>Challenges you to a quiz.</p>
+        <button id="start">start</button>
+    </main>
+    <script src="./script.js"></script>
 </body>
 </html>
