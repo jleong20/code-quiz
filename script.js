@@ -1,6 +1,5 @@
 var timerEl = document.getElementById("timer");
 var main = document.getElementById("main");
-var choice;
 var count = 60;
 var question1 = "JavaScript uses reserved keyword var to declare a ________";
 var question2 = "What is the HTML tag under which one can write the JavaScript code?";
@@ -62,24 +61,24 @@ function quiz1(){
     var result = document.createElement("p");
     result.textContent = "";
     main.appendChild(result);
-    for(var i = 0; i <answer.length; i++){
+    for(var i = 0; i <answer1.length; i++){
         var button = document.createElement("button");
         button.textContent = answer1[i];
         main.appendChild(button);
-        button.setAttribute("id", "answer" +i);
+        button.setAttribute("id", "option" +i);
     }
-    answer0.addEventListener("click", function(){
+    option0.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
-    answer1.addEventListener("click", function(){
+    option1.addEventListener("click", function(){
         result.textContent = "correct!"
     });
-    answer2.addEventListener("click", function(){
+    option2.addEventListener("click", function(){
        //alert("wrong");
        result.textContent = "wrong!"
     });
-    answer3.addEventListener("click", function(){
+    option3.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
@@ -89,24 +88,24 @@ function quiz2(){
     var result = document.createElement("p");
     result.textContent = "";
     main.appendChild(result);
-    for(var i = 0; i <answer.length; i++){
+    for(var i = 0; i <answer2.length; i++){
         var button = document.createElement("button");
         button.textContent = answer2[i];
         main.appendChild(button);
-        button.setAttribute("id", "answer" +i);
+        button.setAttribute("id", "option" +i);
     }
-    answer0.addEventListener("click", function(){
+    option0.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
-    answer1.addEventListener("click", function(){
+    option1.addEventListener("click", function(){
         result.textContent = "wrong!"
     });
-    answer2.addEventListener("click", function(){
+    option2.addEventListener("click", function(){
        //alert("wrong");
        result.textContent = "correct!"
     });
-    answer3.addEventListener("click", function(){
+    option3.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
@@ -117,24 +116,24 @@ function quiz3(){
     var result = document.createElement("p");
     result.textContent = "";
     main.appendChild(result);
-    for(var i = 0; i <answer.length; i++){
+    for(var i = 0; i <answer3.length; i++){
         var button = document.createElement("button");
         button.textContent = answer3[i];
         main.appendChild(button);
-        button.setAttribute("id", "answer" +i);
+        button.setAttribute("id", "option" +i);
     }
-    answer0.addEventListener("click", function(){
+    option0.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
-    answer1.addEventListener("click", function(){
+    option1.addEventListener("click", function(){
         result.textContent = "wrong!"
     });
-    answer2.addEventListener("click", function(){
+    option2.addEventListener("click", function(){
        //alert("wrong");
        result.textContent = "wrong!"
     });
-    answer3.addEventListener("click", function(){
+    option3.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "correct!"
     });
@@ -145,24 +144,24 @@ function quiz4(){
     var result = document.createElement("p");
     result.textContent = "";
     main.appendChild(result);
-    for(var i = 0; i <answer.length; i++){
+    for(var i = 0; i <answer4.length; i++){
         var button = document.createElement("button");
         button.textContent = answer4[i];
         main.appendChild(button);
-        button.setAttribute("id", "answer" +i);
+        button.setAttribute("id", "option" +i);
     }
-    answer0.addEventListener("click", function(){
+    option0.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "correct!"
     });
-    answer1.addEventListener("click", function(){
+    option1.addEventListener("click", function(){
         result.textContent = "wrong!"
     });
-    answer2.addEventListener("click", function(){
+    option2.addEventListener("click", function(){
        //alert("wrong");
        result.textContent = "wrong!"
     });
-    answer3.addEventListener("click", function(){
+    option3.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
@@ -173,25 +172,25 @@ function quiz5(){
     var result = document.createElement("p");
     result.textContent = "";
     main.appendChild(result);
-    for(var i = 0; i <answer.length; i++){
+    for(var i = 0; i <answer5.length; i++){
         var button = document.createElement("button");
         button.textContent = answer5[i];
         main.appendChild(button);
-        button.setAttribute("id", "answer" +i);
+        button.setAttribute("id", "option" +i);
     }
-    answer0.addEventListener("click", function(){
+    option0.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
-    answer1.addEventListener("click", function(){
+    option1.addEventListener("click", function(){
         result.textContent = "correct!"
         gameOver();
     });
-    answer2.addEventListener("click", function(){
+    option2.addEventListener("click", function(){
        //alert("wrong");
        result.textContent = "wrong!"
     });
-    answer3.addEventListener("click", function(){
+    option3.addEventListener("click", function(){
         //alert("wrong");
         result.textContent = "wrong!"
     });
@@ -200,16 +199,11 @@ function quiz5(){
 
 function gameOver(){
     main.textContent = "game over";
+    var addName = document.createElement("div");
+    addName.addEventListener("submit", function(){
+        alert("yo");
+    });
 }
 start.addEventListener("click",function(){
-    /*
-    var timer = setInterval(function(){
-        count--;
-        timerEl.textContent = "Timer: " + count;
-        if(count == 0){
-            gameOver();
-            clearInterval(timer);
-        }
-    }, 1000);*/
     quiz();
 });
